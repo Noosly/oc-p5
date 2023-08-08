@@ -17,6 +17,9 @@ const slides = [
 	}
 ]
 
+
+
+
 function action_fleche_gauche(){
 	alert('Flèche gauche click')
 }
@@ -24,3 +27,10 @@ function action_fleche_gauche(){
 function action_fleche_droite(){
 	alert('Flèche droite click')
 }
+
+let fleche_gauche = document.querySelector(".arrow_left")
+fleche_gauche.addEventListener('click', action_fleche_gauche)
+
+let fleche_droite = document.querySelector(".arrow_right")
+fleche_droite.addEventListener('click', action_fleche_droite)
+
