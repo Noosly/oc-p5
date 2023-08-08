@@ -22,14 +22,18 @@ var selected_slide_index = 0
 
 function action_fleche_gauche(){
 	//alert('Flèche gauche click')
-	select_slide(selected_slide_index - 1, selected_slide_index)
-	selected_slide_index = selected_slide_index - 1
+	new_selected_slide_index = selected_slide_index -1
+	select_slide(new_selected_slide_index, selected_slide_index)
+	changer_banner_img('./assets/images/slideshow/'+ slides[new_selected_slide_index].image)
+	selected_slide_index = new_selected_slide_index
 }
 
 function action_fleche_droite(){
 	//alert('Flèche droite click')
-	select_slide(selected_slide_index + 1, selected_slide_index)
-	selected_slide_index = selected_slide_index + 1
+	new_selected_slide_index = selected_slide_index + 1
+	select_slide(new_selected_slide_index, selected_slide_index)
+	changer_banner_img('./assets/images/slideshow/'+ slides[new_selected_slide_index].image)
+	selected_slide_index = new_selected_slide_index
 }
 
 let fleche_gauche = document.querySelector(".arrow_left")
@@ -48,6 +52,11 @@ function select_slide(new_slide_position, old_selected_slide_index){
 	if(new_slide_position != old_selected_slide_index){		
 		old_selected_dot.classList.remove("dot_selected")
 	}
+}
+
+function changer_banner_img(image_src){
+	let img = document.querySelector(".banner-img")
+	img.setAttribute('src', image_src)
 }
 
 function initialisation(){
