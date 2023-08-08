@@ -34,3 +34,13 @@ fleche_gauche.addEventListener('click', action_fleche_gauche)
 let fleche_droite = document.querySelector(".arrow_right")
 fleche_droite.addEventListener('click', action_fleche_droite)
 
+
+
+
+
+let dots_div = document.querySelector(".dots")
+
+for(let dot in slides){
+	dots_div.innerHTML += `<div class="dot"></div>`
+
+}
