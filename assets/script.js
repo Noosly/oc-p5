@@ -36,7 +36,12 @@ function action_fleche_gauche(){
 
 function action_fleche_droite(){
 	//alert('Flèche droite click')
-	new_selected_slide_index = selected_slide_index + 1	
+	if(selected_slide_index != slides.length - 1){
+		new_selected_slide_index = selected_slide_index + 1
+	}
+	else{
+		new_selected_slide_index = 0
+	}
 	select_slide(new_selected_slide_index, selected_slide_index)
 	changer_banner_img('./assets/images/slideshow/'+ slides[new_selected_slide_index].image)
 	selected_slide_index = new_selected_slide_index
