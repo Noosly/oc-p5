@@ -42,6 +42,7 @@ function action_fleche_droite(){
 	else{
 		new_selected_slide_index = 0
 	}
+	
 	select_slide(new_selected_slide_index, selected_slide_index)
 	changer_banner_img('./assets/images/slideshow/'+ slides[new_selected_slide_index].image)
 	selected_slide_index = new_selected_slide_index
@@ -49,7 +50,6 @@ function action_fleche_droite(){
 
 let fleche_gauche = document.querySelector(".arrow_left")
 fleche_gauche.addEventListener('click', action_fleche_gauche)
-
 
 let fleche_droite = document.querySelector(".arrow_right")
 fleche_droite.addEventListener('click', action_fleche_droite)
@@ -69,6 +69,8 @@ function changer_banner_img(image_src){
 	let img = document.querySelector(".banner-img")
 	img.setAttribute('src', image_src)
 }
+
+
 
 function initialisation(){
 	let dots_div = document.querySelector(".dots")
