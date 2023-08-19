@@ -28,9 +28,7 @@ function select_slide(nouveau_index, ancien_index){
 	let ancien_dot =  document.querySelector("#dot" + ancien_index)
 	let nouveau_dot = document.querySelector("#dot" + nouveau_index)
 	nouveau_dot.classList.add("dot_selected")
-	if(nouveau_index != ancien_index){	//cas de l'initialisation	
-		ancien_dot.classList.remove("dot_selected")
-	}
+	ancien_dot.classList.remove("dot_selected")
 }
 
 function changer_banner_img(image_src){
