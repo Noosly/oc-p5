@@ -50,8 +50,8 @@ function initialisation(){
 	for(let i = 0; i < slides.length; i++){
 		dots_div.innerHTML += `<div class="dot" id="dot${i}"></div>`		
 	}
-	select_slide(0, selected_slide_index)
-	selected_slide_index = 0
+	let dot0_div = document.querySelector("#dot0")
+	dot0_div.classList.add("dot_selected")
 }
 
 
