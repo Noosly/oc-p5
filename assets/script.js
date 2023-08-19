@@ -1,27 +1,27 @@
 function action_fleche_gauche(){
 	if(selected_slide_index != 0){
-		new_selected_slide_index = selected_slide_index -1		
+		nouveau_selected_slide_index = selected_slide_index -1		
 	}
 	else{
-		new_selected_slide_index = slides.length - 1
+		nouveau_selected_slide_index = slides.length - 1
 	}	
-	select_slide(new_selected_slide_index, selected_slide_index)
-	changer_banner_img('./assets/images/slideshow/'+ slides[new_selected_slide_index].image)
-	changer_banner_txt(slides[new_selected_slide_index].tagLine)
-	selected_slide_index = new_selected_slide_index
+	select_slide(nouveau_selected_slide_index, selected_slide_index)
+	changer_banner_img('./assets/images/slideshow/'+ slides[nouveau_selected_slide_index].image)
+	changer_banner_txt(slides[nouveau_selected_slide_index].tagLine)
+	selected_slide_index = nouveau_selected_slide_index
 }
 
 function action_fleche_droite(){
 	if(selected_slide_index != slides.length - 1){
-		new_selected_slide_index = selected_slide_index + 1
+		nouveau_selected_slide_index = selected_slide_index + 1
 	}
 	else{
-		new_selected_slide_index = 0
+		nouveau_selected_slide_index = 0
 	}	
-	select_slide(new_selected_slide_index, selected_slide_index)
-	changer_banner_img('./assets/images/slideshow/'+ slides[new_selected_slide_index].image)
-	changer_banner_txt(slides[new_selected_slide_index].tagLine)
-	selected_slide_index = new_selected_slide_index
+	select_slide(nouveau_selected_slide_index, selected_slide_index)
+	changer_banner_img('./assets/images/slideshow/'+ slides[nouveau_selected_slide_index].image)
+	changer_banner_txt(slides[nouveau_selected_slide_index].tagLine)
+	selected_slide_index = nouveau_selected_slide_index
 }
 
 function select_slide(nouveau_index, ancien_index){
